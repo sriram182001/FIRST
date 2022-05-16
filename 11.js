@@ -3,10 +3,11 @@ const prompt=require('prompt-sync')();
 let s=0;
 function sum(a)
 {
-    if(a==1){
-        return a;
+    if(a==0){
+        return 0;
     }
-    return a+sum(a-1);
+    s=a+sum(a-1);
+    return s;
 }
 let x=+prompt("enter a number:");
 let z=sum(x);
